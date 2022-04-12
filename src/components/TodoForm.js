@@ -2,9 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import db from "../firebase";
 
 /*
+TFG LABS
+created by : sai Teja
+created on : April 12, 2022
 
-
+function for TODO Components where the ToDO Lists are created 
 */
+
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -15,9 +19,25 @@ function TodoForm(props) {
     inputRef.current.focus();
   });
 
+  /*
+TFG LABS
+created by : sai Teja
+created on : April 12, 2022
+
+function for triggering value for changing value in input
+*/
+
   const handleChange = e => {
     setInput(e.target.value);
   };
+
+    /*
+TFG LABS
+created by : sai Teja
+created on : April 12, 2022
+
+function for submitting form with the value added in the TODO
+*/
 
   const handleSubmit = e => {
     e.preventDefault();
